@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
-import { User, MapPin, Phone, Calendar, Heart } from "lucide-react";
+import { User, MapPin, Phone, Calendar, Quote } from "lucide-react";
 
 const items = [
   { icon: User, label: "Name", value: "Vijayalakshmi S" },
@@ -19,19 +19,17 @@ const AboutSection = () => (
         <div className="section-divider" />
       </div>
 
-      <div className="warm-card p-8 md:p-10 mb-8">
-        <div className="flex items-start gap-3 mb-4">
-          <Heart size={20} className="text-accent mt-1 shrink-0" />
-          <p className="text-foreground/80 leading-relaxed text-lg">
-            I'm a passionate BCA student who loves turning ideas into interactive web experiences. 
-            With a strong foundation in HTML, CSS, JavaScript, and Python, I enjoy building products that are 
-            both beautiful and functional. Always eager to learn, grow, and collaborate!
-          </p>
-        </div>
+      <div className="warm-card p-8 md:p-10 mb-8 relative overflow-hidden">
+        <Quote size={40} className="absolute top-4 right-4 text-primary/10" />
+        <p className="text-foreground/80 leading-relaxed text-lg">
+          I'm a passionate BCA student who loves turning ideas into interactive web experiences. 
+          With a strong foundation in HTML, CSS, JavaScript, and Python, I enjoy building products that are 
+          both beautiful and functional. Always eager to learn, grow, and collaborate!
+        </p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {items.map((item, i) => (
+        {items.map((item) => (
           <motion.div
             key={item.label}
             whileHover={{ scale: 1.03 }}
